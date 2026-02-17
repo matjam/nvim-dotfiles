@@ -27,6 +27,10 @@ return {
         layout_config = {
           horizontal = { prompt_position = "top" },
         },
+        file_ignore_patterns = {
+          "__pycache__",
+          "%.pyc$",
+        },
       },
     })
     pcall(telescope.load_extension, "fzf")

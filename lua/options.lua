@@ -28,7 +28,7 @@ opt.signcolumn = "yes"
 opt.cursorline = true
 opt.scrolloff = 8
 opt.sidescrolloff = 8
-opt.wrap = false
+opt.wrap = true
 
 -- Splits open in intuitive directions
 opt.splitbelow = true
@@ -44,8 +44,14 @@ opt.timeoutlen = 400
 -- Don't show mode in cmdline (lualine shows it)
 opt.showmode = false
 
+-- Allow switching between buffers with unsaved changes
+opt.hidden = true
+
 -- Better completion
 opt.completeopt = { "menuone", "noselect" }
+
+-- Ignore Python cache files
+opt.wildignore:append({ "*.pyc", "*/__pycache__/*", "**/__pycache__/**" })
 
 -- Disable netrw (neo-tree replaces it)
 vim.g.loaded_netrw = 1
