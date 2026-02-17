@@ -26,8 +26,8 @@ return {
           vim.cmd("enew")
           vim.cmd("bdelete! " .. bufnum)
         else
-          -- Close the buffer (Neovim will auto-switch to another)
-          vim.cmd("bdelete! " .. bufnum)
+          -- Switch to previous buffer, then delete the target buffer
+          vim.cmd("bprevious | bdelete! " .. bufnum)
         end
       end,
     },

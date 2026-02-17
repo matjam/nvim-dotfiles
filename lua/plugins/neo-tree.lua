@@ -20,7 +20,7 @@ return {
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
       filtered_items = {
-        visible = true,
+        visible = false,
         hide_dotfiles = false,
         hide_gitignored = false,
         hide_by_name = {
@@ -41,8 +41,11 @@ return {
     default_component_configs = {
       indent = {
         with_expanders = true,
-        expander_collapsed = "",
-        expander_expanded = "",
+        expander_collapsed = "▸",
+        expander_expanded = "▾",
+        indent_marker = "",
+        last_indent_marker = "",
+        indent_size = 2,
       },
       icon = {
         folder_closed = "",
