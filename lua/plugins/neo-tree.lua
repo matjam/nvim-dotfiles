@@ -16,6 +16,32 @@ return {
   opts = {
     close_if_last_window = true,
     popup_border_style = "rounded",
+    event_handlers = {
+      {
+        event = "file_added",
+        handler = function()
+          vim.cmd("Neotree refresh")
+        end,
+      },
+      {
+        event = "file_deleted",
+        handler = function()
+          vim.cmd("Neotree refresh")
+        end,
+      },
+      {
+        event = "file_moved",
+        handler = function()
+          vim.cmd("Neotree refresh")
+        end,
+      },
+      {
+        event = "file_renamed",
+        handler = function()
+          vim.cmd("Neotree refresh")
+        end,
+      },
+    },
     filesystem = {
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
