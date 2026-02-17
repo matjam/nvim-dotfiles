@@ -1,0 +1,7 @@
+# Lazy.nvim plugin directory (downloaded on first launch)
+plugin/
+
+# Neovim swap/backup/undo files
+*.swp
+*.bak
+undodir/
