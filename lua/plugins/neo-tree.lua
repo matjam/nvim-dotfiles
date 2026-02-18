@@ -69,8 +69,7 @@ return {
         with_expanders = true,
         expander_collapsed = "▸",
         expander_expanded = "▾",
-        indent_marker = "",
-        last_indent_marker = "",
+        with_markers = false,
         indent_size = 2,
       },
       icon = {
